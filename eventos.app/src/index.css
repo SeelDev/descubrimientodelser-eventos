@@ -1,0 +1,34 @@
+/* Importación de todas las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/* Texto general */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #2c3e2e;
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos principales con DM Serif Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.image-divider-container {
+  width: 100%;
+  max-width: 900px;
+  margin: -10px auto 0 auto; /* Reducimos el margen superior a un valor chico o negativo para acercarlo */
+  padding: 10px 20px;       /* Achicamos el padding de arriba y abajo */
+  text-align: center;
+}
+
+.divider-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}

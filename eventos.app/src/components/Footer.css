@@ -1,0 +1,207 @@
+.footer-container {
+  width: 100%;
+  background-color: #588157; /* Cambiamos al mismo verde claro/medio de la sección previa para que se una sin cortes */
+  color: #ffffff;
+  padding: 40px 20px 40px 20px; /* Reducimos el padding superior ya que viene pegado de otro bloque verde */
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.italic-title {
+  font-family: 'DM Serif Display', serif !important;
+  font-style: italic !important;
+}
+.footer-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* El cuadro de la biografía también lo adaptamos para que se funda con el fondo */
+.footer-bio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.08); /* Ligeramente más visible para destacar sobre el verde */
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bio-image-wrapper {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.bio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bio-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bio-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 400;
+}
+
+.bio-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bio-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #f0f4ef;
+  line-height: 1.5;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  margin: 10px 0;
+}
+
+.footer-brand {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.footer-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #d8f3dc;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.footer-links a {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d8f3dc;
+}
+
+.footer-social {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.instagram-cta-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+}
+
+.instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.instagram-btn svg {
+  fill: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.instagram-btn:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.footer-copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #d8f3dc;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-bio-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .bio-image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .bio-name {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .bio-list {
+    text-align: left;
+  }
+}

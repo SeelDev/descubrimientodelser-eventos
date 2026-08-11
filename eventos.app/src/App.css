@@ -1,0 +1,10 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px; /* Esta es la clave: empuja el scroll más abajo del menú */
+}
+
+/* 2. Asegura que el cuerpo de la página respete el espacio de la barra fija */
+body {
+  margin: 0;
+  padding-top: 75px; /* Empuja todo el contenido hacia abajo para que el Hero no quede metido atrás de la barra */
+}

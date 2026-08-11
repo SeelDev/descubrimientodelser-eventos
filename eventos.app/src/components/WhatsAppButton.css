@@ -1,0 +1,68 @@
+.whatsapp-dynamic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #3a5a40 0%, #588157 100%);
+  color: #ffffff;
+  font-family:  sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(58, 90, 64, 0.35);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: floatButton 3s ease-in-out infinite;
+}
+
+/* Efecto de brillo dinámico interno */
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.whatsapp-dynamic-btn:hover .btn-glow {
+  left: 100%;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.3px;
+}
+
+/* Animación de movimiento sutil flotante */
+@keyframes floatButton {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 6px 20px rgba(58, 90, 64, 0.35);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(58, 90, 64, 0.5);
+  }
+}
+
+/* Efecto al hacer hover o foco */
+.whatsapp-dynamic-btn:hover {
+  transform: scale(1.05) translateY(-3px);
+  background: linear-gradient(135deg, #344e41 0%, #3a5a40 100%);
+  box-shadow: 0 12px 30px rgba(58, 90, 64, 0.6);
+}
+
+.whatsapp-dynamic-btn:active {
+  transform: scale(0.98);
+}

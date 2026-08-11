@@ -1,0 +1,31 @@
+.about-container {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 800px; 
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #2c3e2e;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 1.25rem;
+  line-height: 1.8; 
+  color: #4a5c4d;
+  margin-bottom: 25px;
+  text-align: justify; 
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}

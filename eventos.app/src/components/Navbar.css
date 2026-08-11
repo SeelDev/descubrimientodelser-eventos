@@ -1,0 +1,144 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 2px 15px rgba(44, 62, 46, 0.08);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: #2c3e2e;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c3e2e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #3a5a40;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #3a5a40;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Ocultamos el botón de hamburguesa en pantallas grandes */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1002;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #2c3e2e;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* --- ESTILOS PARA CELULARES Y PANTALLAS PEQUEÑAS --- */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .hamburger {
+    display: flex; /* Mostramos el botón de hamburguesa */
+  }
+
+  /* Animación del botón hamburguesa a cruz "X" cuando se abre */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Panel lateral derecho oculto por defecto */
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla a la derecha */
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1001;
+  }
+
+  /* Cuando se abre, se desliza hacia la izquierda */
+  .navbar-links.open {
+    right: 0;
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+  }
+
+  /* Fondo oscuro semitransparente que bloquea el contenido de atrás */
+  .menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+  }
+}

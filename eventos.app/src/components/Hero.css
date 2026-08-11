@@ -1,0 +1,252 @@
+.hero-container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  padding-top: 100px; /* <--- ESTO ES LO QUE EMPUJA EL TÍTULO HACIA ABAJO DE LA BARRA */
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(30, 45, 32, 0.75), rgba(30, 45, 32, 0.75)), url('/images/3.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'DM Serif Display', serif; /* Aplicamos la nueva tipografía */
+  font-size: 3.2rem;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.hero-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  line-height: 1.4;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.whatsapp-btn {
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  background-color: #d4af37;
+  color: #2c3e2e;
+  padding: 12px 28px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.6);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  background-color: #f3cc4a;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.8);
+}
+
+/* --- DISEÑO RESPONSIVE PARA CELULARES --- */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 60vh;
+    background-position: 70% center;
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem; /* Ajustado para pantallas de celular */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+.btn {
+  height: 3.5em;
+  width: 15em; /* Agrandamos el ancho para que sea bien rectangular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0px solid black;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 15px auto 0 auto;
+}
+
+.wrapper {
+  height: 2.5em;
+  width: 12em; /* Ampliamos el contenedor interno */
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 1;
+  color: #2c3e2e;
+  padding: 10px 24px; 
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  white-space: nowrap; 
+}
+
+.flower {
+  display: grid;
+  grid-template-columns: 1em 1em;
+  position: absolute;
+  transition: grid-template-columns 0.8s ease;
+}
+
+.flower1 {
+  top: -12px;
+  left: -13px;
+  transform: rotate(5deg);
+}
+
+.flower2 {
+  bottom: -5px;
+  left: 8px;
+  transform: rotate(35deg);
+}
+
+.flower3 {
+  bottom: -15px;
+  transform: rotate(0deg);
+}
+
+.flower4 {
+  top: -14px;
+  transform: rotate(15deg);
+}
+
+.flower5 {
+  right: 11px;
+  top: -3px;
+  transform: rotate(25deg);
+}
+
+.flower6 {
+  right: -15px;
+  bottom: -15px;
+  transform: rotate(30deg);
+}
+
+.petal {
+  height: 1em;
+  width: 1em;
+  border-radius: 40% 70% / 7% 90%;
+  background: linear-gradient(#588157, #a3b18a); /* Degradé de verdes naturales */
+  border: 0.5px solid #3a5a40;
+  z-index: 0;
+  transition: width 0.8s ease, height 0.8s ease;
+}
+
+.two {
+  transform: rotate(90deg);
+}
+
+.three {
+  transform: rotate(270deg);
+}
+
+.four {
+  transform: rotate(180deg);
+}
+
+.btn:hover .petal {
+  background: linear-gradient(#3a5a40, #588157);
+  border: 0.5px solid #344e41;
+}
+
+.btn:hover .flower {
+  grid-template-columns: 1.5em 1.5em;
+}
+
+.btn:hover .flower .petal {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.btn:hover .text {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* Animaciones de rotación de las flores al hacer hover */
+.btn:hover div.flower1 {
+  animation: 15s linear 0s normal none infinite running flower1;
+}
+
+@keyframes flower1 {
+  0% { transform: rotate(5deg); }
+  100% { transform: rotate(365deg); }
+}
+
+.btn:hover div.flower2 {
+  animation: 13s linear 1s normal none infinite running flower2;
+}
+
+@keyframes flower2 {
+  0% { transform: rotate(35deg); }
+  100% { transform: rotate(-325deg); }
+}
+
+.btn:hover div.flower3 {
+  animation: 16s linear 1s normal none infinite running flower3;
+}
+
+@keyframes flower3 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn:hover div.flower4 {
+  animation: 17s linear 1s normal none infinite running flower4;
+}
+
+@keyframes flower4 {
+  0% { transform: rotate(15deg); }
+  100% { transform: rotate(375deg); }
+}
+
+.btn:hover div.flower5 {
+  animation: 20s linear 1s normal none infinite running flower5;
+}
+
+@keyframes flower5 {
+  0% { transform: rotate(25deg); }
+  100% { transform: rotate(-335deg); }
+}
+
+.btn:hover div.flower6 {
+  animation: 15s linear 1s normal none infinite running flower6;
+}
+
+@keyframes flower6 {
+  0% { transform: rotate(30deg); }
+  100% { transform: rotate(390deg); }
+}

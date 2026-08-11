@@ -1,0 +1,32 @@
+.counter-container {
+  background-color: #a8c2ab; /* Fondo verde oscuro */
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.counter-content {
+  max-width: 600px;
+}
+
+.counter-number {
+  font-size: 5.5rem; 
+  color: #fcfcfc; 
+  margin: 0;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.counter-text {
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff; 
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.566), 
+               0 0 10px rgba(255, 255, 255, 0.4);
+ 
+}
